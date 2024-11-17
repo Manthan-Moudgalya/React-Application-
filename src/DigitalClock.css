@@ -1,0 +1,23 @@
+.clock-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-border{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-time{
+    font-size: 25px;
+    /* font: "poppins", sans-serif; */
+    /* font: "comic sans ms" */
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.side-bar-active {
+    /* position: absolute; */
+    z-index: 2;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: all .55s ease-in-out;
+    width: 300px; 
+}
+
+.side-bar-active .social-medias {
+    gap: 0; 
+}
+
+.side-bar-active .collapse-btn {
+    background-image: url("../assets/icons8-close-icon.svg");
+    background-size: contain; 
+}
+
+
+.side-bar-inactive {
+    max-width: 270px; 
+    z-index: 2;
+    /* position: absolute; */
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: all .55s ease-in-out;
+    width: 4%; 
+}
+
+.side-bar-inactive .social-media-ele{
+    pointer-events: none;
+    cursor: default;
+}
+
+.side-bar-inactive .text {
+    display: none;
+}
+
+.collapse-btn {
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/icons8-menu-64.svg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.side-bar-active .social-media-ele {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+    padding: 6%;
+}
+
+
+.side-bar-inactive .social-media-ele {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 20px;
+}
+
+.side-bar-active .social-media-ele:hover {
+    background-color: #302f2f;
+    cursor: pointer;
+}
+
+.social-medias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+
+}
+
+a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    font-family: var(--FONTFAM), sans-serif  ;
+    align-items: center;
+}
+
+.icon{
+    margin-right: 2%;
+    width: 30px;
+    height: 30px;
+}
+
+.text{
+    font-size: 1rem;
+}

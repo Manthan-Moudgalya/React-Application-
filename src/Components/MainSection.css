@@ -1,0 +1,157 @@
+.main-section {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: var(--FONTFAM);
+  font-size: 20px;
+  background: black;
+  color: white;
+  margin-left: 80px;
+  /* border: 2px solid blue; */
+}
+
+section {
+  margin-top: 25px;
+  position: relative;
+  min-height: 85%;
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  background: linear-gradient(-90deg, white, rgb(16, 16, 255));
+  border-radius: 50%;
+  transform: translate(-280px, -100px);
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  background: linear-gradient(-90deg, white, rgb(16, 16, 255));
+  border-radius: 50%;
+  transform: translate(280px, 100px);
+}
+/* Start */
+.card-container {
+  height: 315px;
+  width: 550px;
+  z-index: 2;
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 25px;
+  backdrop-filter: blur(25px);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  transition: transform 2s ease;
+  transform-style: preserve-3d;
+  z-index: 3;
+}
+
+.card-container:hover .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.back,
+.front {
+  z-index: 3;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* End */
+
+/* .card-container:hover .card {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.front-face,
+.back-face {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.back-face {
+  background-color: aqua;
+  transform: rotateY(180deg);
+} */
+
+.front .logo img {
+  width: 80px;
+}
+
+.front header,
+.front .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front .card-details {
+  display: flex;
+  margin-top: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signature {
+  margin-left: 35px;
+  margin-top: 20px;
+  width: 70%;
+  height: 50px;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    #fff,
+    #fff 3px,
+    #efefef 0px,
+    #efefef 9px
+  );
+  position: relative;
+}
+
+.cvv {
+  position: absolute;
+  top: 23%;
+  right: -40px;
+  background-color: #fff;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  font-size: 15px;
+  font-family: var(--FONTFAM);
+  padding: 5px;
+}
+
+.text-msg {
+  font-size: 12px;
+  padding: 20px;
+  margin-top: 40px;
+}

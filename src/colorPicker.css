@@ -1,0 +1,24 @@
+.color-display {
+    border: 1px solid hsl(0, 5%, 60%);
+    height: 500px;
+    width: 500px;
+    transition: all 0.3s ease;
+}
+
+.input-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+h3{
+    margin-top: 40px ;
+}
+
+#inp-color {
+    height: 50px;
+    width: 90px;
+    margin-top: 40px ;
+}
